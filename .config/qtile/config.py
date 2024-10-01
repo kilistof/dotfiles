@@ -102,7 +102,7 @@ for i in groups:
 
 layouts = [
     layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
-    layout.Max(),
+    # layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=1),
     # layout.Bsp(),
@@ -141,7 +141,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Battery(),
+                #widget.Battery(),
                 widget.PulseVolume(emoji=False),
                 widget.Clock(format="%Y-%m-%d %a %H:%M"),
                 widget.QuickExit(default_text="\ueba5", countdown_start=1),
