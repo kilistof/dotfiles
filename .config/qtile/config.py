@@ -36,7 +36,7 @@ keys = [
     Key([mod, "shift"],"Return",lazy.layout.toggle_split(),desc="Toggle between split and unsplit sides of stack",),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    # Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod],"f",lazy.window.toggle_fullscreen(),desc="Toggle fullscreen on the focused window",),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
@@ -91,6 +91,7 @@ for i in groups:
             Key([mod], "Left", lazy.screen.prev_group(), desc="Switch to previous group"),
             Key(["mod1", "control"], "Right", lazy.screen.next_group(), desc="Switch to next group"),
             Key(["mod1", "control"], "Left", lazy.screen.prev_group(), desc="Switch to previous group"),
+            Key([mod], "Tab", lazy.screen.next_group(skip_empty=True), desc="Switch to next group"),
             Key(["mod1"], "Tab", lazy.screen.next_group(skip_empty=True), desc="Switch to next group"),
             Key(["mod1","shift"], "Tab", lazy.screen.prev_group(skip_empty=True), desc="Switch to next group"),
             # Or, use below if you prefer not to switch to that group.
