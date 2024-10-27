@@ -27,9 +27,9 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # Add in snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
+#zinit snippet OMZP::git
+#zinit snippet OMZP::sudo
+#zinit snippet OMZP::archlinux
 #zinit snippet OMZP::aws
 #zinit snippet OMZP::kubectl
 #zinit snippet OMZP::kubectx
@@ -73,6 +73,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias c='clear'
 alias setup='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Shell integrations
 eval "$(fzf --zsh)"
